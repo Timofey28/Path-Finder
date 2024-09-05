@@ -1,0 +1,9 @@
+# Object/executable files
+*.o
+*.exe
+
+# Service files
+toUTF8.bat
+
+# Do not ignore!
+!Path-Finder.exe
