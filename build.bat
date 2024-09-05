@@ -1,4 +1,4 @@
-del *.o
-g++ -c main.cc field.cc mouse_input.cc algorithm.cc draw.cc
+@echo off
+g++ -c src\main.cc src\field.cc src\mouse_input.cc src\algorithm.cc src\draw.cc
 g++ -o Path-Finder main.o field.o mouse_input.o algorithm.o draw.o
-pause
+del *.o

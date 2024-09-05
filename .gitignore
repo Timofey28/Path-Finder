@@ -4,6 +4,7 @@
 
 # Service files
 toUTF8.bat
+toANSI.bat
 
 # Do not ignore!
 !Path-Finder.exe

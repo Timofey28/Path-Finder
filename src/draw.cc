@@ -1,5 +1,8 @@
 #include "draw.h"
 
+#include <iostream>
+#include <thread>
+#include <chrono>
 #include <windows.h>
 
 using namespace std;
@@ -90,7 +93,7 @@ void draw::NoPathFound()
         __SetPosition(indentX, indentY + 0); cout << "     ____       _   _   ";
         __SetPosition(indentX, indentY + 1); cout << "    |  _ \\ __ _| |_| |__   __      ____ _ ___  ";
         __SetPosition(indentX, indentY + 2); cout << "    | |_) / _` | __| '_ \\  \\ \\ /\\ / / _` / __|  ";
-        __SetPosition(indentX, indentY + 3); cout << "    |  __/ (_| | |_| | | |  \\ \\V  \\V / (_| \\__ \\  ";
+        __SetPosition(indentX, indentY + 3); cout << "    |  __/ (_| | |_| | | |  \\ V  V / (_| \\__ \\  ";
         __SetPosition(indentX, indentY + 4); cout << "    |_|   \\__,_|\\__|_| |_|   \\_/\\_/ \\__,_|___/  ";
         __SetPosition(indentX, indentY + 5); cout << "               _      __                       _  ";
         __SetPosition(indentX, indentY + 6); cout << "   _ __   ___ | |_   / _| ___  _   _ _ __   __| |  ";

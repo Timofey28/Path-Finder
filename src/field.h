@@ -2,9 +2,9 @@
 
 #include <vector>
 
-#include "mouse_input.cc"
-#include "algorithm.cc"
-#include "draw.cc"
+#include "mouse_input.h"
+#include "algorithm.h"
+#include "draw.h"
 #include "point.h"
 
 

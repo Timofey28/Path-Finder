@@ -1,8 +1,11 @@
 #include "field.h"
 
+#include <thread>
+
 #include "draw.h"
 
 using namespace draw;
+using namespace std::chrono_literals;
 
 
 Field::Field(int consoleWidth, int consoleHeight)
@@ -32,6 +35,7 @@ void Field::FindPath()
         mouseInput_.GetClickInfo();
         Point clickedPoint(mouseInput_.X, mouseInput_.Y);
         int pointNumber = mouseInput_.Y * width_ + mouseInput_.X / 2;
+        if (pointNumber == width_ * height_ - 1) continue;
 
         if (mouseInput_.buttonPressed == ButtonPressed::LEFT) {
             if (field_[pointNumber].type == PointType::DESTINATION) {
@@ -87,13 +91,13 @@ void Field::FindPath()
         else if (mouseInput_.buttonPressed == ButtonPressed::WHEEL) {
             if (startIsChosen_ && destinationIsChosen_) break;
             else {
-                // todo: добавить вывод сообщения об ошибке
+                // todo: вывод сообщения об ошибке
             }
         }
     }
 
     algorithm_.FindShortestPath(field_, width_, height_);
-    this_thread::sleep_for(500ms);
+    std::this_thread::sleep_for(500ms);
     draw::RefreshField(field_);
     if (algorithm_.shortestPath.size()) DrawPath(algorithm_.shortestPath, width_);
     else draw::NoPathFound();

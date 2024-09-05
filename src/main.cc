@@ -1,6 +1,8 @@
 #include <iostream>
 #include <windows.h>
-#include "field.cc"
+
+#include "field.h"
+
 using namespace std;
 
 int nConsoleWidth, nConsoleHeight;

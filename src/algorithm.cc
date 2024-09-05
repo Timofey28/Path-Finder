@@ -1,5 +1,6 @@
 #include "algorithm.h"
 
+#include <iostream>
 #include <queue>
 #include <thread>
 
@@ -19,7 +20,7 @@ void Algorithm::FindShortestPath(vector<Point>& field, int fieldWidth, int field
         nodes[i].reserve(4);
 
     // fill adjacency list
-    for (int i = 0; i < field.size(); ++i) {
+    for (int i = 0; i < field.size() - 1; ++i) {
         if (!__FitType(field[i])) continue;
 
         int x = field[i].x,

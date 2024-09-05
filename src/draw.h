@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>
+#include <vector>
 
 #include "point.h"
 
@@ -34,7 +35,7 @@ void __SetPosition(short, short);
 void __SetColor(Color);
 
 
-std::map<PointType, Color> POINT_COLOR {
+static std::map<PointType, Color> POINT_COLOR {
     {PointType::PASS, Color::BLACK},
     {PointType::WALL, Color::ALMOST_WHITE},
     {PointType::START, Color::GREEN},
